@@ -20,7 +20,7 @@ defmodule BeepBop.Example.OrderMachine do
     event(:will_fail, %{from: [:cart], to: :cancelled}, fn context ->
       multi =
         Ecto.Multi.new()
-        |> Ecto.Multi.run(:failure, fn _ ->
+        |> Ecto.Multi.run(:failure, fn _repo, _change ->
           {:error, :failed}
         end)
 

@@ -30,12 +30,12 @@ defmodule BeepBop.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:credo, "~> 0.9.1", only: :dev, runtime: false},
-      {:credo_contrib, "~> 0.1.0-rc", only: :dev, runtime: false},
-      {:excoveralls, "~> 0.7", only: :test},
-      {:ecto, "~> 2.2"},
-      {:postgrex, "~> 0.13.5", only: :test},
-      {:ex_doc, "~> 0.18", only: :dev, runtime: false}
+      {:credo, "~> 1.5", only: :dev, runtime: false},
+      {:credo_contrib, "~> 0.2", only: :dev, runtime: false},
+      {:excoveralls, "~> 0.14", only: :test},
+      {:ecto_sql, "~> 3.6"},
+      {:postgrex, "~> 0.15", only: :test},
+      {:ex_doc, "~> 0.25", only: :dev, runtime: false}
     ]
   end
 

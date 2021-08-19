@@ -167,7 +167,7 @@ defmodule BeepBop do
   def persist_helpers do
     quote location: :keep do
       defp __beepbop_final_multi(multi, struct, to_state) do
-        Multi.run(multi, :persist, fn changes ->
+        Multi.run(multi, :persist, fn _repo, changes ->
           updated_struct = Map.get(changes, @beepbop_name) || struct
           to = Atom.to_string(to_state)
           __beepbop_persist(updated_struct, to)
